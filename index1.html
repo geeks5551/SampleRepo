@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+   <head>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="x-apple-disable-message-reformatting">
+      <title></title>
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+      <style>
+         html,
+         body {
+         margin: 0 auto !important;
+         padding: 0 !important;
+         height: 100% !important;
+         width: 100% !important;
+         background: #f1f1f1;
+         }
+         /* What it does: Stops email clients resizing small text. */
+         * {
+         -ms-text-size-adjust: 100%;
+         -webkit-text-size-adjust: 100%;
+         }
+         /* What it does: Centers email on Android 4.4 */
+         div[style*="margin: 16px 0"] {
+         margin: 0 !important;
+         }
+         /* What it does: Stops Outlook from adding extra spacing to tables. */
+         table,
+         td {
+         mso-table-lspace: 0pt !important;
+         mso-table-rspace: 0pt !important;
+         }
+         /* What it does: Fixes webkit padding issue. */
+         table {
+         border-spacing: 0 !important;
+         border-collapse: collapse !important;
+         table-layout: fixed !important;
+         margin: 0 auto !important;
+         }
+         /* What it does: Uses a better rendering method when resizing images in IE. */
+         img {
+         -ms-interpolation-mode:bicubic;
+         }
+         /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+         a {
+         text-decoration: none;
+         }
+         /* What it does: A work-around for email clients meddling in triggered links. */
+         *[x-apple-data-detectors],  /* iOS */
+         .unstyle-auto-detected-links *,
+         .aBn {
+         border-bottom: 0 !important;
+         cursor: default !important;
+         color: inherit !important;
+         text-decoration: none !important;
+         font-size: inherit !important;
+         font-family: inherit !important;
+         font-weight: inherit !important;
+         line-height: inherit !important;
+         }
+         /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+         .a6S {
+         display: none !important;
+         opacity: 0.01 !important;
+         }
+         /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+         .im {
+         color: inherit !important;
+         }
+         /* If the above doesn't work, add a .g-img class to any image in question. */
+         img.g-img + div {
+         display: none !important;
+         }
+         /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+         /* Create one of these media queries for each additional viewport size you'd like to fix */
+         /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+         @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+         u ~ div .email-container {
+         min-width: 320px !important;
+         }
+         }
+         /* iPhone 6, 6S, 7, 8, and X */
+         @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+         u ~ div .email-container {
+         min-width: 375px !important;
+         }
+         }
+         /* iPhone 6+, 7+, and 8+ */
+         @media only screen and (min-device-width: 414px) {
+         u ~ div .email-container {
+         min-width: 414px !important;
+         }
+         }
+      </style>
+      <style>
+         .primary{
+         background: #fcb545;
+         }
+         .bg_white{
+         background: #ffffff;
+         }
+         .bg_light{
+         background: #fafafa;
+         }
+         .bg_black{
+         background: #000000;
+         }
+         .bg_dark{
+         background: #5E0B15;
+         }
+         .email-section{
+         padding:2.5em;
+         }
+         /*BUTTON*/
+         .btn{
+         padding: 10px 15px;
+         }
+         .btn.btn-primary{
+         border-radius: 30px;
+         background: #fcb545;
+         color: #ffffff;
+         }
+         h1,h2,h3,h4,h5,h6{
+         font-family: 'Playfair Display', serif;
+         color: #000000;
+         margin-top: 0;
+         }
+         body{
+         font-family: 'Montserrat', sans-serif;
+         font-weight: 400;
+         font-size: 15px;
+         line-height: 1.8;
+         color: rgba(0,0,0,.4);
+         }
+         a{
+         color: #fcb545;
+         }
+         table{
+         }
+         /*LOGO*/
+         .logo h1{
+         margin: 0;
+         }
+         .logo h1 a{
+         color: #000;
+         font-size: 20px;
+         font-weight: 700;
+         text-transform: uppercase;
+         font-family: 'Montserrat', sans-serif;
+         }
+         /*HERO*/
+         .hero{
+         position: relative;
+         }
+         .hero img{
+         }
+         .hero .text{
+         color: rgba(255,255,255,.8);
+         }
+         .hero .text h2{
+         color: #ffffff;
+         font-size: 30px;
+         margin-bottom: 0;
+         }
+         /*HEADING SECTION*/
+         .heading-section{
+         }
+         .heading-section h2{
+         color: #000000;
+         font-size: 28px;
+         margin-top: 0;
+         line-height: 1.4;
+         }
+         .heading-section .subheading{
+         margin-bottom: 20px !important;
+         display: inline-block;
+         font-size: 13px;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         color: rgba(0,0,0,.4);
+         position: relative;
+         }
+         .heading-section .subheading::after{
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: -10px;
+         content: '';
+         width: 100%;
+         height: 2px;
+         background: #fcb545;
+         margin: 0 auto;
+         }
+         .heading-section-white{
+         color: rgba(255,255,255,.8);
+         }
+         .heading-section-white h2{
+         font-size: 28px;
+         font-family: 
+         line-height: 1;
+         padding-bottom: 0;
+         }
+         .heading-section-white h2{
+         color: #ffffff;
+         }
+         .heading-section-white .subheading{
+         margin-bottom: 0;
+         display: inline-block;
+         font-size: 13px;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         color: rgba(255,255,255,.4);
+         }
+         .icon{
+         text-align: center;
+         }
+         .icon img{
+         }
+         /*SERVICES*/
+         .text-services{
+         padding: 10px 10px 0; 
+         text-align: center;
+         }
+         .text-services h3{
+         font-size: 20px;
+         }
+         /*BLOG*/
+         .text-services .meta{
+         text-transform: uppercase;
+         font-size: 14px;
+         }
+         /*TESTIMONY*/
+         .text-testimony .name{
+         margin: 0;
+         }
+         .text-testimony .position{
+         color: rgba(0,0,0,.3);
+         }
+         /*VIDEO*/
+         .img{
+         width: 100%;
+         height: auto;
+         position: relative;
+         }
+         .img .icon{
+         position: absolute;
+         top: 50%;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         margin-top: -25px;
+         }
+         .img .icon a{
+         display: block;
+         width: 60px;
+         position: absolute;
+         top: 0;
+         left: 50%;
+         margin-left: -25px;
+         }
+         /*COUNTER*/
+         .counter-text{
+         text-align: center;
+         }
+         .counter-text .num{
+         display: block;
+         color: #ffffff;
+         font-size: 34px;
+         font-weight: 700;
+         }
+         .counter-text .name{
+         display: block;
+         color: rgba(255,255,255,.9);
+         font-size: 13px;
+         }
+         /*FOOTER*/
+         .footer{
+         color: rgba(255,255,255,.5);
+         }
+         .footer .heading{
+         color: #ffffff;
+         font-size: 20px;
+         }
+         .footer ul{
+         margin: 0;
+         padding: 0;
+         }
+         .footer ul li{
+         list-style: none;
+         margin-bottom: 10px;
+         }
+         .footer ul li a{
+         color: rgba(255,255,255,1);
+         }
+         @media screen and (max-width: 500px) {
+         .icon{
+         text-align: left;
+         }
+         .text-services{
+         padding-left: 0;
+         padding-right: 20px;
+         text-align: left;
+         }
+         }
+
+         .topLogo{
+            background-color: #5E0B15;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: white;
+            padding: 20px 0px;
+            font-weight: 200;
+            font-size: 18px;
+         }
+
+         .topLogo img{
+            padding-right: 4px;
+         }
+
+         .topLogo span{
+            padding-left: 4px;
+         }
+
+      </style>
+   </head>
+   <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+      <center style="width: 100%; background-color: #f1f1f1;">
+         <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+         </div>
+         <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+            <div class="topLogo">
+               <img src="https://github.com/thesmallstar/effe-email/blob/master/images/finallogo.png?raw=true" alt="Logo" style="width: 6rem;">
+               <span>EFFERVESCENCE | IIIT ALLAHABAD</span>
+            </div>   
+             
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+               
+               <!-- <tr>
+                  <td class="bg_white logo" style="padding: 1em 2.5em; text-align: center">
+                     <img  src="https://github.com/thesmallstar/effe-email/blob/master/images/logo0.png?raw=true" height="120px">
+                  </td>
+               </tr> -->
+               <tr>
+                  <td valign="middle" class="hero" style="background-image: url(images/bg.jpeg); background-size: cover; height: 400px;">
+                     <table>
+                        <tr>
+                           <td>
+                              <div class="text" style="padding: 0 3em; text-align: center;">
+                              </div>
+                           </td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="bg_white">
+                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                           <td class="bg_dark email-section" style="text-align:center;">
+                              <div class="heading-section heading-section-white">
+                                 <span class="subheading">About</span>
+                                 <p>Effervescence is the annual cultural festival of IIIT Allahabad, an Institute of national importance established by the HRD Ministry, Govt. Of India.
+At Effervescence, We believe that while the academic achievements are important, the cultural activities foster the real spirit of kinship and skills for sublime social existence, thereby promoting the overall development of an individual. Over the years, the fest has risen to great standards - its popularity ramped up, reach extended far and wide to national circuits, and its name became a by-word for a grand celebration. The fest garners a total footfall of about 21k, with participants from over 150 colleges of the country. Our online events have been a real eye-opener, with participation from over 25 countries.</p>
+                                 <p><a href="https://www.facebook.com/effervescence.iiita/" class="btn btn-primary">Know More</a></p>
+                              </div>
+                           </td>
+                        </tr>
+                     <tr>
+                           <td class="bg_white email-section">
+                              <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                                 <span class="subheading">Glimpses</span>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="bg_light email-section" style="padding: 0; width: 100%;">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                 <tr>
+                                    <td valign="middle" width="50%">
+                                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                          <tr>
+                                             <td class="text-services" style="text-align: left; padding: 20px 30px;">
+                                                <div class="heading-section">
+   
+                                                   <p>Effervescence is a host to a wide variety of events, pertaining to various genres of entertainment, ensuring that every individual enjoys the three days of extravaganza. Every year, we try to go an extra mile to make sure that these days leave an indelible impression for a lifetime.</p>
+                                                 
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                    <td valign="middle" width="50%">
+                                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                          <tr>
+                                             <td>
+                                                <img src="https://github.com/thesmallstar/effe-email/blob/master/images/neetim.jpg?raw=true" alt="Neeti Mohan" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="bg_light email-section" style="padding: 0; width: 100%;">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                 <tr>
+                                    <td valign="middle" width="50%">
+                                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                          <tr>
+                                             <td>
+                                                <img src="https://github.com/thesmallstar/effe-email/blob/master/images/ritviz.jpg?raw=true" alt="Ritviz" style="width: 100%; max-width: 600px; height: 300px; margin: auto; display: block;">
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                    <td valign="middle" width="50%">
+                                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                          <tr>
+                                             <td class="text-services" style="text-align: left; padding: 20px 30px;">
+                                                <div class="heading-section">
+                                                   
+                                                   <p>	
+ 
+ 
+													The success of a fest is highly dependent on the performances put forth by the performers, and we have surely witnessed spectacular shows</p>
+                                               
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="bg_light email-section" style="padding: 0; width: 100%;">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                 <tr>
+                                    <td valign="middle" width="50%">
+                                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                          <tr>
+                                             <td class="text-services" style="text-align: left; padding: 20px 30px;">
+                                                <div class="heading-section">
+                                                   <span class="subheading">When Chai met Toast:</span>
+                                                  
+                                                   <p>"Performance and enjoyment at the same time, cheerful people, great crowd and the earniest host have made it one of our favourites. A resounding experience for us."</p>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                    <td valign="middle" width="50%">
+                                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                          <tr>
+                                             <td>
+                                                <img src="https://github.com/thesmallstar/effe-email/blob/master/images/chai.jpg?raw=true" alt="When Chai Met Toast" style="width: 100%; max-width: 600px; height: 300px; margin: auto; display: block; object-fit: cover;">
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="bg_light email-section" style="padding: 0; width: 100%;">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                 <tr>
+                                    <td valign="middle" width="50%">
+                                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                          <tr>
+                                             <td>
+                                                <img src="https://github.com/thesmallstar/effe-email/blob/master/images/sunil.jpeg?raw=true" alt="Sunil Jogi" style="width: 100%; max-width: 600px; height: 300px; margin: auto; display: block;">
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                    <td valign="middle" width="50%">
+                                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                          <tr>
+                                             <td class="text-services" style="text-align: left; padding: 20px 30px;">
+                                                <div class="heading-section">
+                                                   <span class="subheading">Sunil Jogi</span>
+                                                   <p>"Sublime crowd, patient listeners and a great night to remember. The organizers have taken a huge responsibility in making the fest grand and a successful story. Happy to be a part of a celebration of such a kind."</p>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+						</tr>
+						<tr>
+							<td class="bg_white email-section">
+							   <div class="heading-section" style="text-align: center; padding: 0 30px;">
+								  <span class="subheading">Benefits</span>
+								
+							   </div>
+							   <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+								  <tr>
+									 <td valign="top" width="50%" style="padding-top: 20px;">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+										   <tr>
+											  <td class="icon">
+												 <img src="https://github.com/thesmallstar/effe-email/blob/master/images/reach.png?raw=true" alt="" style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+											  </td>
+										   </tr>
+										   <tr>
+											  <td class="text-services">
+												 <h3>Pan India Reach</h3>
+												 <p>Far far away, behind the word mountains, far from the countries Campus Ambassadors in over 400 and participants from over 120 colleges across the Nation.</p>
+											  </td>
+										   </tr>
+										</table>
+									 </td>
+									 <td valign="top" width="50%" style="padding-top: 20px;">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+										   <tr>
+											  <td class="icon">
+												 <img src="https://github.com/thesmallstar/effe-email/blob/master/images/popularity.png?raw=true" alt="" style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+											  </td>
+										   </tr>
+										   <tr>
+											  <td class="text-services">
+												 <h3>Growing Popularity</h3>
+												 <p>Effervescence 2019 was a phenomenal success with footfalls exceeding 21,000, witnessing participation from all over India.</p>
+											  </td>
+										   </tr>
+										</table>
+									 </td>
+									 <td valign="top" width="50%" style="padding-top: 20px;">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+										   <tr>
+											  <td class="icon">
+												 <img src="https://github.com/thesmallstar/effe-email/blob/master/images/excellence.png?raw=true" alt="" style="width: 60px; max-width: 600px; height: auto; margin: auto; display: block;">
+											  </td>
+										   </tr>
+										   <tr>
+											  <td class="text-services">
+												 <h3>Affordable excellence</h3>
+												 <p>With a dedicated team, we deliver what we promise. It may be an association deliverable or the 4 best days of your life.</p>
+											  </td>
+										   </tr>
+										</table>
+									 </td>
+								  </tr>
+							   </table>
+							</td>
+						 </tr>
+					   
+            </table>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+               <tbody><tr>
+                  <td valign="middle" class="bg_black footer email-section">
+                     <table>
+                        <tbody><tr>
+                          
+                           <td valign="top" width="33.333%" style="padding-top: 20px;">
+                              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                 <tbody><tr>
+                                    <td style="text-align: left; padding-left: 5px; padding-right: 5px;color:white;">
+                                       <h3 class="heading">Contact Info</h3>
+                                       <ul>
+                                          <li><span class="text">Room no. 1306 Admin Extension 1,
+                                 IIIT Allahabad, Prayagraj, U.P.
+                                          </span></li>
+                                          <li><span class="text">Email: effervescence@iiita.ac.in</span></li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                           </td>
+                           <td valign="top" width="33.333%" style="padding-top: 20px;">
+                              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                 <tbody><tr>
+                                    <td style="text-align: left; padding-left: 10px;">
+                                       <h3 class="heading">Social Accounts</h3>
+                                       <ul>
+                                          <li>
+                                             <a href="https://www.facebook.com/effervescence.iiita/">
+                                                <i class="fa fa-facebook fa-2x" aria-hidden="true" style="float:left;display:inline;margin-left:15%;padding-top: 7px;"></i>
+                                             </a>
+                                          </li>
+                                          <li>
+                                             <a href="https://www.youtube.com/channel/UCSKd_5A0v36U5Bt0y-SDJWg">
+                                                
+                                                <i class="fa fa-youtube-play fa-2x" aria-hidden="true" style="float:left;display:inline;margin-left:10%;padding-top: 7px;"></i>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                           </td>
+                        </tr>
+                     </tbody></table>
+                  </td>
+               </tr>
+               <tr>
+                  <td valign="middle" class="bg_black footer email-section">
+                     <table>
+                        <tbody><tr>
+                           <td valign="top" width="33.333%">
+                              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                 <tbody><tr>
+                                    <td style="text-align: left; padding-right: 10px;color:white;">
+                                       <p>© 2020 Effervescence. All Rights Reserved</p>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                              </td>
+                              <td valign="top" width="33.333%">
+                                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tbody>
+                                       <tr>
+                           
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         </div>
+      </center>
+     
+      <script type="f278c5775d678c6ac8f6524b-text/javascript">
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-23581568-13');
+      </script>
+      <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="f278c5775d678c6ac8f6524b-|49" defer=""></script>
+   </body>
+</html>
