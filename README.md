@@ -11,10 +11,10 @@ _italics_
 ~~1000~~ **999**
 
 Links
-[Visit Website](https://learncodeonline.in"LCO")
+[Visit Website](www.google.com)
 
 Images
-![LCO Mascot](https://learncodeonline.in/mascot.png"LCO")
+![LCO Mascot](www.google.com/.png"LCO")
 
 USE `FOR` loop
 
@@ -31,11 +31,13 @@ Table
 
 >Keep Smiling And Work Harder
 
----For Normal Underline
+---
+For Normal Underline
 1.List One
 2.List Two
 3.List Three
 |   List Four
 -List Five
 
-***For Bold Underline
+***
+For Bold Underline
