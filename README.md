@@ -14,7 +14,7 @@ Links
 [Visit Website](www.google.com)
 
 Images
-![GOOGLE Mascot](www.google.com/.png"LCO")
+![GOOGLE Mascot](www.google.com/bg1.jpg "GOOGLE")
 
 USE `FOR` loop
 
@@ -46,4 +46,5 @@ For Normal Underline
 -List Five
 
 ***
+
 For Bold Underline
