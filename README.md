@@ -1,5 +1,5 @@
 # SampleRepo
-Sample Repo to learn more about frontend web development and git
+Sample Repo to learn more about frontend web development,git,github and md(Markdown) Language
 
 # heading 1
 ## heading 2
@@ -14,7 +14,7 @@ Links
 [Visit Website](www.google.com)
 
 Images
-![LCO Mascot](www.google.com/.png"LCO")
+![GOOGLE Mascot](www.google.com/.png"LCO")
 
 USE `FOR` loop
 
@@ -29,15 +29,17 @@ Table
 |--- |--- |--- |
 |One |Two |Three |
 
->
-Keep Smiling And Work Harder
+>Keep Smiling And Work Harder
 
 ---
 For Normal Underline
 
  1.List One
+ 
  2.List Two
+ 
  3.List Three
+ 
  
    |   List Four
    
